@@ -235,7 +235,7 @@
                             Submit
                         </button>
 
-                        <a href="https://ipaiotmh.azurewebsites.net/data.php">
+                        <a href="https://ipaiotmh.azurewebsites.net/data.txt">
                             <button type="button" id="file">
                                 <span></span>
                                 <span></span>
