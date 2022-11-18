@@ -218,11 +218,11 @@
                         <label>Email</label>
                     </div>
                     <div class="user-box">
-                        <input type="age" name="age" required>
+                        <input type="number" name="age" required>
                         <label>Age</label>
                     </div>
                     <div class="user-box">
-                        <input type="opinion" name="op" required="">
+                        <input type="text" name="op" required="">
                         <label>Opinion</label>
                     </div>
 
