@@ -185,6 +185,11 @@
 
             }
 
+            .buttons{
+                display: flex;
+                justify-content: space-between;
+            }
+
         </style>
 
             <title>Document</title>
@@ -221,13 +226,25 @@
                         <label>Opinion</label>
                     </div>
 
-                    <button type="submit" id="send">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        Submit
-                    </button>
+                    <div class="buttons">
+                        <button type="submit" id="send">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            Submit
+                        </button>
+
+                        <a href="https://ipaiotmh.azurewebsites.net/data.php">
+                            <button type="button" id="file">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                Data File
+                            </button>
+                        </a>
+                    </div>
 
                 </form>
             </div>
