@@ -36,7 +36,7 @@
     $temperature = $_GET["t"];
         
     $textH = "Humidity:" . $humidity . " %";
-    $textT = "Temperature" . $temperature . " C";
+    $textT = "Temperature:" . $temperature . " ºC";
         
     echo $textH;
     echo "<br>";
