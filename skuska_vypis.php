@@ -35,11 +35,10 @@
     $humidity = $_GET["h"];
     $temperature = $_GET["t"];
         
-    $text = "Humidity:" . $sn1 . " %";
-    $text = "Temperature" . $sn2 . " C";
-    $sum = $sn1 + $sn2;
+    $textH = "Humidity:" . $humidity . " %";
+    $textT = "Temperature" . $temperature . " C";
         
-    echo $text;
+    echo $textH;
     echo "<br>";
-    echo "Sum:" . $sum;
+    echo $textT;
 ?>
