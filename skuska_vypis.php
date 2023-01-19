@@ -25,17 +25,18 @@
 
     <body>
 
-    <h1 style="color:white;">ESP VALUES</h1>
+    <h1 style="color:blue;">ESP VALUES</h1>
 
     </body>
 </html>
 
 <?php
 
-    $sn1 = $_GET["a"];
-    $sn2 = $_GET["b"];
+    $humidity = $_GET["h"];
+    $temperature = $_GET["t"];
         
-    $text = "a=" . $sn1 . " b=" . $sn2;
+    $text = "Humidity:" . $sn1 . " %";
+    $text = "Temperature" . $sn2 . " C";
     $sum = $sn1 + $sn2;
         
     echo $text;
