@@ -21,11 +21,11 @@
 
     <body>
 
-    <h1>ESP VALUES</h1>
+    <h1 style="color:white;">ESP VALUES</h1>
 
-    <h3>Humidity :</h3>
+    <h3 style="color:white;">Humidity :</h3>
 
-    <h3>Temperature:</h3>
+    <h3 style="color:white;">Temperature:</h3>
 
     </body>
 </html>
