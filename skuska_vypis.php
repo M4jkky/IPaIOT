@@ -14,7 +14,11 @@
                 font-family: sans-serif;
                 background: linear-gradient(#141e30, #243b55);
             }
-         </style>
+        </style>
 
-            <title>Document</title>
-        </head>
+        <title>Document</title>
+    </head>
+
+    <body>
+    </body>
+</html>
