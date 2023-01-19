@@ -14,6 +14,11 @@
                 font-family: sans-serif;
                 background: linear-gradient(#141e30, #243b55);
             }
+
+            * {
+                text-align: center;
+            }
+
         </style>
 
         <title>Document</title>
