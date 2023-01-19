@@ -12,7 +12,6 @@
                 margin:0;
                 padding:0;
                 font-family: sans-serif;
-                background: linear-gradient(#141e30, #243b55);
             }
 
             * {
@@ -28,9 +27,18 @@
 
     <h1 style="color:white;">ESP VALUES</h1>
 
-    <h3 style="color:white;">Humidity :</h3>
-
-    <h3 style="color:white;">Temperature:</h3>
-
     </body>
 </html>
+
+<?php
+
+    $sn1 = $_GET["a"];
+    $sn2 = $_GET["b"];
+        
+    $text = "a=" . $sn1 . " b=" . $sn2;
+    $sum = $sn1 + $sn2;
+        
+    echo $text;
+    echo "<br>";
+    echo "Sum:" . $sum;
+?>
