@@ -80,8 +80,8 @@
     <br>
     <input type="button" name="clear" value="c" onclick="document.forms[0].display.value=''"/>
     <input type="button" name="zero" value="0" onclick="document.forms[0].display.value+='0'"/>
-    <input type="submit" name="equals" value="="/>
     <input type="button" name="divide" value="/" onclick="document.forms[0].display.value+='/'"/>
+    <input type="submit" name="equals" value="="/>
 </form>
 
 <?php
