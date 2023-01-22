@@ -88,6 +88,7 @@
     <input type="button" name="divide" value="/" onclick="appendToDisplay(this)"/>
 </form>
 </body>
+</html>
 
 <?php
 $display = "";
