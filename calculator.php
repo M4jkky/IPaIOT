@@ -1,5 +1,13 @@
+<?php
+$display = "";
+
+if (isset($_POST['equals'])) {
+    $display = eval('return ' . $_POST['display'] . ';');
+}
+?>
+
 <form>
-    <input type="text" id="display" value="" />
+    <input type="text" id="display" value="<?php echo $display; ?>" />
     <br>
     <input type="button" name="one" value="1" onclick="appendToDisplay(this)"/>
     <input type="button" name="two" value="2" onclick="appendToDisplay(this)"/>
