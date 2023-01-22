@@ -59,6 +59,7 @@ if (isset($_POST['equals'])) {
     .calculator input[name="minus"],
     .calculator input[name="times"],
     .calculator input[name="divide"] {
+        width: 25%;
         background-color: #f44336;
         color: #fff;
     }
@@ -78,9 +79,8 @@ if (isset($_POST['equals'])) {
                 <br>
                 <input type="button" name="one" value="1" onclick="appendToDisplay(this)"/>
                 <input type="button" name="two" value="2" onclick="appendToDisplay(this)"/>
-                <input type="button" name="plus" value="+" onclick="appendToDisplay(this)"/>
                 <input type="button" name="three" value="3" onclick="appendToDisplay(this)"/>
-    
+                <input type="button" name="plus" value="+" onclick="appendToDisplay(this)"/>
                 <br>
                 <input type="button" name="four" value="4" onclick="appendToDisplay(this)"/>
                 <input type="button" name="five" value="5" onclick="appendToDisplay(this)"/>
