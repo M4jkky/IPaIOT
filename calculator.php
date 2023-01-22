@@ -1,4 +1,5 @@
 <form method="post" action="calculator.php">
+    <form method="post" action="calculator.php">
     <input type="text" name="display" value="<?php echo $display; ?>"/>
     <br>
     <input type="button" name="one" value="1" onclick="document.forms[0].display.value+='1'"/>
@@ -27,8 +28,3 @@ if (isset($_POST['equals'])) {
     $display = eval('return ' . $_POST['display'] . ';');
 }
 ?>
-<form method="post" action="calculator.php">
-    <input type="text" name="display" value="<?php echo $display; ?>"/>
-    <br>
-    ...
-</form>
