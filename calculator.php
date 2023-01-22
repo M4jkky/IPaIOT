@@ -73,31 +73,31 @@ if (isset($_POST['equals'])) {
     </style>
 </head>
     <body>
-        <form>
-            <div class="calculator">
-                <input type="text" id="display" value="<?php echo $display; ?>" />
-                <br>
-                <input type="button" name="one" value="1" onclick="appendToDisplay(this)"/>
-                <input type="button" name="two" value="2" onclick="appendToDisplay(this)"/>
-                <input type="button" name="three" value="3" onclick="appendToDisplay(this)"/>
-                <input type="button" name="plus" value="+" onclick="appendToDisplay(this)"/>
-                <br>
-                <input type="button" name="four" value="4" onclick="appendToDisplay(this)"/>
-                <input type="button" name="five" value="5" onclick="appendToDisplay(this)"/>
-                <input type="button" name="six" value="6" onclick="appendToDisplay(this)"/>
-                <input type="button" name="minus" value="-" onclick="appendToDisplay(this)"/>
-                <br>
-                <input type="button" name="seven" value="7" onclick="appendToDisplay(this)"/>
-                <input type="button" name="eight" value="8" onclick="appendToDisplay(this)"/>
-                <input type="button" name="nine" value="9" onclick="appendToDisplay(this)"/>
-                <input type="button" name="times" value="*" onclick="appendToDisplay(this)"/>
-                <br>
-                <input type="button" name="clear" value="c" onclick="clearDisplay()"/>
-                <input type="button" name="zero" value="0" onclick="appendToDisplay(this)"/>
-                <input type="button" name="equals" value="=" onclick="calculate()"/>
-                <input type="button" name="divide" value="/" onclick="appendToDisplay(this)"/>
-            </div>
-        </form>
+    <div class="calculator">
+    <form method="post" action="">
+        <input type="text" id="display" name="display" value="<?php echo $display; ?>" />
+        <br>
+        <div id="number-buttons">
+            <input type="button" name="one" value="1" onclick="appendToDisplay(this)"/>
+            <input type="button" name="two" value="2" onclick="appendToDisplay(this)"/>
+            <input type="button" name="three" value="3" onclick="appendToDisplay(this)"/>
+            <input type="button" name="four" value="4" onclick="appendToDisplay(this)"/>
+            <input type="button" name="five" value="5" onclick="appendToDisplay(this)"/>
+            <input type="button" name="six" value="6" onclick="appendToDisplay(this)"/>
+            <input type="button" name="seven" value="7" onclick="appendToDisplay(this)"/>
+            <input type="button" name="eight" value="8" onclick="appendToDisplay(this)"/>
+            <input type="button" name="nine" value="9" onclick="appendToDisplay(this)"/>
+            <input type="button" name="zero" value="0" onclick="appendToDisplay(this)"/>
+        </div>
+        <div id="operator-buttons">
+            <input type="button" name="plus" value="+" onclick="appendToDisplay(this)"/>
+            <input type="button" name="minus" value="-" onclick="appendToDisplay(this)"/>
+            <input type="button" name="times" value="*" onclick="appendToDisplay(this)"/>
+            <input type="button" name="divide" value="/" onclick="appendToDisplay(this)"/>
+        </div>
+        <input type="submit" name="equals" value="=" onclick="calculate()"/>
+    </form>
+</div>
     </body>
 </html>
 
