@@ -1,11 +1,69 @@
-<?php
-$display = "";
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculator</title>
+    <style>
+    /* Calculator Container */
+    .calculator {
+        width: 300px;
+        margin: 50px auto;
+        background-color: #f5f5f5;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px #ccc;
+        display: flex;
+        flex-wrap: wrap;
+    }
 
-if (isset($_POST['equals'])) {
-    $display = eval('return ' . $_POST['display'] . ';');
-}
-?>
+    /* Calculator Display */
+    .calculator #display {
+        width: 100%;
+        height: 50px;
+        font-size: 1.5rem;
+        padding: 10px;
+        border-radius: 5px;
+        border: none;
+        box-shadow: 0px 0px 5px #ccc;
+        text-align: right;
+        margin-bottom: 20px;
+    }
 
+    /* Calculator Buttons */
+    .calculator input[type="button"] {
+        width: 25%;
+        height: 40px;
+        font-size: 1.2rem;
+        margin: 5px;
+        border-radius: 5px;
+        border: none;
+        background-color: #ddd;
+        color: #333;
+        transition: all 0.2s ease-in-out;
+    }
+
+    .calculator input[type="button"]:hover {
+        background-color: #ccc;
+        cursor: pointer;
+    }
+
+    /* Calculator Operators */
+    .calculator input[name="plus"],
+    .calculator input[name="minus"],
+    .calculator input[name="times"],
+    .calculator input[name="divide"] {
+        background-color: #f44336;
+        color: #fff;
+    }
+
+    .calculator input[name="plus"]:hover,
+    .calculator input[name="minus"]:hover,
+    .calculator input[name="times"]:hover,
+    .calculator input[name="divide"]:hover {
+        background-color: #e53935;
+    }
+    </style>
+</head>
+<body>
 <form>
     <input type="text" id="display" value="<?php echo $display; ?>" />
     <br>
@@ -29,6 +87,15 @@ if (isset($_POST['equals'])) {
     <input type="button" name="equals" value="=" onclick="calculate()"/>
     <input type="button" name="divide" value="/" onclick="appendToDisplay(this)"/>
 </form>
+</body>
+
+<?php
+$display = "";
+
+if (isset($_POST['equals'])) {
+    $display = eval('return ' . $_POST['display'] . ';');
+}
+?>
 
 <script>
     function appendToDisplay(btn) {
