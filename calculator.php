@@ -26,3 +26,9 @@
 if (isset($_POST['equals'])) {
     $display = eval('return ' . $_POST['display'] . ';');
 }
+?>
+<form method="post" action="calculator.php">
+    <input type="text" name="display" value="<?php echo $display; ?>"/>
+    <br>
+    ...
+</form>
