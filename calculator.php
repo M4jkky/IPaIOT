@@ -21,6 +21,7 @@ if (isset($_POST['equals'])) {
         box-shadow: 0px 0px 10px #ccc;
         display: flex;
         flex-wrap: wrap;
+        
     }
 
     /* Calculator Display */
@@ -34,6 +35,7 @@ if (isset($_POST['equals'])) {
         box-shadow: 0px 0px 5px #ccc;
         text-align: right;
         margin-bottom: 20px;
+        justify-content: center;
     }
 
     /* Calculator Buttons */
