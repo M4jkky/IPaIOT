@@ -27,7 +27,7 @@ if (isset($_POST['equals'])) {
             width: 100%;
             height: 50px;
             font-size: 1.5rem;
-            padding: 10px -28px;
+            padding: 10px -35px;
             border-radius: 5px;
             border: none;
             box-shadow: 0px 0px 5px #ccc;
