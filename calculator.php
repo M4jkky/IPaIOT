@@ -79,7 +79,7 @@ if (isset($_POST['equals'])) {
         input[name="plus"],
         input[name="minus"],
         input[name="times"],
-        input[name="divide"]:hover {
+        input[name="divide"] {
             background-color: #f44336;
             color: #fff;
         }
