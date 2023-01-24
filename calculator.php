@@ -190,7 +190,7 @@ if (isset($_POST['equals'])) {
 
 
     <div class="calculator">
-    <form method="post" action="">
+    <form method="post" action="" onsubmit="return false;>
         <div class="display-wrapper">
             <input type="text" id="display" name="display" value="<?php echo $display; ?>" readonly/>
             <button id="clear" onclick="clearDisplay()">C</button>
