@@ -27,7 +27,7 @@ if (isset($_POST['equals'])) {
             width: 100%;
             height: 50px;
             font-size: 1.5rem;
-            padding: 10px -20px;
+            padding: 10px -28px;
             border-radius: 5px;
             border: none;
             box-shadow: 0px 0px 5px #ccc;
@@ -93,13 +93,13 @@ if (isset($_POST['equals'])) {
 
         #clear {
             width: 25%;
-            height: 40px;
+            height: 50px;
             font-size: 1.2rem;
             margin: 5px;
             border-radius: 5px;
             border: none;
-            background-color: #ddd;
-            color: #333;
+            background-color: #38c2c2;
+            color: #fff;
             transition: all 0.2s ease-in-out;
             display: inline-block;
             align-self: center;
@@ -107,7 +107,7 @@ if (isset($_POST['equals'])) {
         }   
 
         #clear:hover {
-            background-color: #e53935;
+            background-color: #156b6b;
         }
         
         .display-wrapper {
@@ -119,7 +119,7 @@ if (isset($_POST['equals'])) {
     <div class="calculator">
     <form method="post" action="">
         <div class="display-wrapper">
-            <input type="text" id="display" name="display" value="<?php echo $display; ?>" />
+            <input type="text" id="display" name="display" value="<?php echo $display; ?>" readonly/>
             <button id="clear" onclick="clearDisplay()">C</button>
         </div>
         <div class="row">
