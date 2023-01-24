@@ -44,6 +44,14 @@ if (isset($_POST['equals'])) {
 
         input[type="submit"] {
             background-color : #32a869;
+            width: 25%;
+            height: 40px;
+            font-size: 1.2rem;
+            margin: 5px;
+            border-radius: 5px;
+            border: none;
+            color: #333;
+            transition: all 0.2s ease-in-out;
         }
 
         input[type="submit"]:hover {
@@ -51,8 +59,7 @@ if (isset($_POST['equals'])) {
             cursor: pointer;
         }
 
-        input[type="button"],
-        input[type="submit"] {
+        input[type="button"] {
             width: 25%;
             height: 40px;
             font-size: 1.2rem;
