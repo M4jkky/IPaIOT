@@ -104,7 +104,7 @@ if (isset($_POST['equals'])) {
             display: inline-block;
             align-self: center;
             text-align: center;
-            margin-left: 12px;
+            margin-left: 10px;
         }   
 
         #clear:hover {
@@ -159,7 +159,7 @@ if (isset($_POST['equals'])) {
     function calculate() {
         let display = document.getElementById("display").value;
         if (display === "") {
-            alert("Tak si prijebaný?.");
+            alert("Tak si prijebaný?");
             return;
         }
         var expr = document.getElementById("display").value;
