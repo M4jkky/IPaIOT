@@ -79,40 +79,42 @@ if (isset($_POST['equals'])) {
     <form method="post" action="">
         <input type="text" id="display" name="display" value="<?php echo $display; ?>" />
         <br>
-        <div id="number-buttons">
+        <div class="row">
             <input type="button" name="one" value="1" onclick="appendToDisplay(this)"/>
             <input type="button" name="two" value="2" onclick="appendToDisplay(this)"/>
             <input type="button" name="three" value="3" onclick="appendToDisplay(this)"/>
+            <input type="button" name="plus" value="+" onclick="appendToDisplay(this)"/>
+        </div>
+        <div class="row">
             <input type="button" name="four" value="4" onclick="appendToDisplay(this)"/>
             <input type="button" name="five" value="5" onclick="appendToDisplay(this)"/>
             <input type="button" name="six" value="6" onclick="appendToDisplay(this)"/>
+            <input type="button" name="minus" value="-" onclick="appendToDisplay(this)"/>
+        </div>
+        <div class="row">
             <input type="button" name="seven" value="7" onclick="appendToDisplay(this)"/>
             <input type="button" name="eight" value="8" onclick="appendToDisplay(this)"/>
             <input type="button" name="nine" value="9" onclick="appendToDisplay(this)"/>
-            <input type="button" name="zero" value="0" onclick="appendToDisplay(this)"/>
-        </div>
-        <div id="operator-buttons">
-            <input type="button" name="plus" value="+" onclick="appendToDisplay(this)"/>
-            <input type="button" name="minus" value="-" onclick="appendToDisplay(this)"/>
             <input type="button" name="times" value="*" onclick="appendToDisplay(this)"/>
+        </div>
+        <div class="row">
+            <input type="button" name="dot" value="." onclick="appendToDisplay(this)"/>
+            <input type="button" name="zero" value="0" onclick="appendToDisplay(this)"/>
+            <input type="submit" name="equals" value="=" onclick="calculate()"/>
             <input type="button" name="divide" value="/" onclick="appendToDisplay(this)"/>
         </div>
-        <input type="submit" name="equals" value="=" onclick="calculate()"/>
     </form>
 </div>
-    </body>
-</html>
 
 <script>
     function appendToDisplay(btn) {
-        document.getElementById("display").value += btn.value;
+        var btnValue = btn.value;
+        document.getElementById("display").value += btnValue;
     }
-    function clearDisplay() {
-        document.getElementById("display").value = '';
-    }
+
     function calculate() {
-        var expression = document.getElementById("display").value;
-        var result = eval(expression);
+        var expr = document.getElementById("display").value;
+        var result = eval(expr);
         document.getElementById("display").value = result;
     }
 </script>
