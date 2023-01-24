@@ -236,9 +236,10 @@ if (isset($_POST['equals'])) {
         let display = document.getElementById("display").value;
         if (display === "") {
             Swal.fire({
-                icon: 'error',
-                title: 'Oops...',
-                text: 'Tak si prijebaný?',
+                icon: 'Tak si prijebaný?',
+                title: 'Boha',
+                text: 'Chceš ma pokaziť?',
+                showConfirmButton: true
             })
         return;
     }
