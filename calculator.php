@@ -31,7 +31,7 @@ if (isset($_POST['equals'])) {
             border-radius: 5px;
             border: none;
             box-shadow: 0px 0px 5px #ccc;
-            text-align: right;
+            text-align: center;
             margin: 20px auto;
             background-color: #fff;
             color: #333;
