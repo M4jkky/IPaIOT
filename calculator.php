@@ -73,108 +73,50 @@ if (isset($_POST['equals'])) {
 
 
     /* Calculator Container */
-        .calculator {
-            text-align:center;
-            width: 300px;
-            margin: 50px auto;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 0px 10px #ccc;
-            display: flex;
-            flex-wrap: wrap;
-        }
+    #calculator {
+    width: 250px;
+    height: 350px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f3f3f3;
+    border-radius: 10px;
+}
 
-        #display {
-            width: 100%;
-            height: 50px;
-            font-size: 1.5rem;
-            padding: 10px -50px;
-            border-radius: 5px;
-            border: none;
-            box-shadow: 0px 0px 5px #ccc;
-            text-align: center;
-            margin: 20px auto;
-            background-color: #fff;
-            color: #333;
-        }
+    #display {
+        width: 100%;
+        height: 50px;
+        margin-bottom: 20px;
+        padding: 10px;
+        font-size: 1.5em;
+        text-align: right;
+        background-color: #ffffff;
+        border: none;
+        border-radius: 5px;
+    }
 
-        .row {
-            width: 100%;
-            display: flex;
-        }
+    button {
+        width: 60px;
+        height: 60px;
+        margin: 0;
+        padding: 0;
+        font-size: 1.5em;
+        background-color: #ffffff;
+        border: 1px solid #cccccc;
+        border-radius: 5px;
+        color: #333333;
+        transition: all 0.2s;
+    }
 
-        input[type="submit"] {
-            background-color : #32a869;
-            width: 25%;
-            height: 40px;
-            font-size: 1.2rem;
-            margin: 5px;
-            border-radius: 5px;
-            border: none;
-            color: #333;
-            transition: all 0.2s ease-in-out;
-        }
+    button:hover {
+        background-color: #cccccc;
+    }
 
-        input[type="submit"]:hover {
-            background-color: #c8cf48;
-            cursor: pointer;
-        }
-
-        input[type="button"] {
-            width: 25%;
-            height: 40px;
-            font-size: 1.2rem;
-            margin: 5px;
-            border-radius: 5px;
-            border: none;
-            background-color: #ddd;
-            color: #333;
-            transition: all 0.2s ease-in-out;
-        }
-
-        input[type="button"]:hover {
-            background-color: #ccc;
-            cursor: pointer;
-        }
-
-        input[name="plus"],
-        input[name="minus"],
-        input[name="times"],
-        input[name="divide"] {
-            background-color: #f44336;
-            color: #fff;
-        }
-
-        input[name="plus"]:hover,
-        input[name="minus"]:hover,
-        input[name="times"]:hover,
-        input[name="divide"]:hover {
-            background-color: #e53935;
-        }
-
-        #clear {
-            width: 29%;
-            height: 50px;
-            font-size: 1.2rem;
-            margin: 5px;
-            border-radius: 5px;
-            border: none;
-            background-color: #38c2c2;
-            color: #fff;
-            transition: all 0.2s ease-in-out;
-            display: inline-block;
-            align-self: center;
-            text-align: center;
-            margin-left: 10px;
-        }   
-
-        #clear:hover {
-            background-color: #156b6b;
-        }
-        
-        .display-wrapper {
-            display: flex;
-        }
+    #clear {
+        width: 100%;
+        margin-top: 20px;
+        background-color: #ff0000;
+        color: #ffffff;
+    }
     </style>
 </head>
     <body>
