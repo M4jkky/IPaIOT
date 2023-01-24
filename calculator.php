@@ -12,6 +12,7 @@ if (isset($_POST['equals'])) {
     <title>Calculator</title>
     <style>
 
+    /* menu*/
         .menu-container {
             position: absolute;
             top: 20px;
@@ -51,6 +52,23 @@ if (isset($_POST['equals'])) {
 
         .menu-item:hover {
             color: #00bfff;
+        }
+
+        .menu-item {
+            color: #000;
+            display: block;
+            text-decoration: none;
+            margin-bottom: 10px;
+            padding: 10px 20px;
+            background-color: #00bfff; /* or any color you like */
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+
+        .menu-item:hover {
+            background-color: #0095d9; /* or any color you like */
         }
 
 
