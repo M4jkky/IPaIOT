@@ -91,13 +91,29 @@ if (isset($_POST['equals'])) {
         input[name="equals"]:hover {
             background-color: #e53935;
         }
+
+        #clear {
+            padding: 10px;
+            background-color: #f44336; /* or any color you like */
+            color: #fff;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            margin-left: 10px;
+        }   
+
+#clear:hover {
+    background-color: #e53935; /* or any color you like */
+}
     </style>
 </head>
     <body>
     <div class="calculator">
     <form method="post" action="">
-        <input type="text" id="display" name="display" value="<?php echo $display; ?>" />
-        <br>
+        <div class="display-wrapper">
+            <input type="text" id="display" name="display" value="<?php echo $display; ?>" />
+            <button id="clear" onclick="clearDisplay()">Clear</button>
+        </div>
         <div class="row">
             <input type="button" name="one" value="1" onclick="appendToDisplay(this)"/>
             <input type="button" name="two" value="2" onclick="appendToDisplay(this)"/>
@@ -135,5 +151,9 @@ if (isset($_POST['equals'])) {
         var expr = document.getElementById("display").value;
         var result = eval(expr);
         document.getElementById("display").value = result;
+    }
+
+    function clearDisplay() {
+        document.getElementById("display").value = "";
     }
 </script>
