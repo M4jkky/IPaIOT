@@ -27,7 +27,7 @@ if (isset($_POST['equals'])) {
             width: 100%;
             height: 50px;
             font-size: 1.5rem;
-            padding: 10px -10px;
+            padding: 10px -20px;
             border-radius: 5px;
             border: none;
             box-shadow: 0px 0px 5px #ccc;
@@ -87,20 +87,23 @@ if (isset($_POST['equals'])) {
         input[name="plus"]:hover,
         input[name="minus"]:hover,
         input[name="times"]:hover,
-        input[name="divide"]:hover,
-        input[name="equals"]:hover {
+        input[name="divide"]:hover {
             background-color: #e53935;
         }
 
         #clear {
-            padding: 10px;
-            background-color: #f44336; /* or any color you like */
-            color: #fff;
-            border-radius: 5px;
+            width: 25%;
+            height: 40px;
             font-size: 1.2rem;
-            cursor: pointer;
+            margin: 5px;
+            border-radius: 5px;
+            border: none;
+            background-color: #ddd;
+            color: #333;
+            transition: all 0.2s ease-in-out;
             display: inline-block;
             align-self: center;
+            text-align: center;
         }   
 
         #clear:hover {
@@ -117,7 +120,7 @@ if (isset($_POST['equals'])) {
     <form method="post" action="">
         <div class="display-wrapper">
             <input type="text" id="display" name="display" value="<?php echo $display; ?>" />
-            <button id="clear" onclick="clearDisplay()">Clear</button>
+            <button id="clear" onclick="clearDisplay()">C</button>
         </div>
         <div class="row">
             <input type="button" name="one" value="1" onclick="appendToDisplay(this)"/>
