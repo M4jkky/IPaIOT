@@ -225,7 +225,6 @@ if (isset($_POST['equals'])) {
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 
 <script>
-    
 
     function appendToDisplay(btn) {
         var btnValue = btn.value;
@@ -259,5 +258,10 @@ if (isset($_POST['equals'])) {
         let menu = document.getElementById("menu");
         menu.style.display = (menu.style.display === "block") ? "none" : "block";
     }
+
+    document.getElementById("equals").addEventListener("click", function(event){
+        event.preventDefault();
+        calculate();
+    });
 
 </script>
