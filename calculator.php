@@ -189,38 +189,34 @@ if (isset($_POST['equals'])) {
 </div>
 
 
-    <div class="calculator">
-    <form method="post" action="">
-        <div class="display-wrapper">
-            <input type="text" id="display" name="display" value="<?php echo $display; ?>" readonly/>
-            <button id="clear" onclick="clearDisplay()">C</button>
-        </div>
-        <div class="row">
-            <input type="button" name="one" value="1" onclick="appendToDisplay(this)"/>
-            <input type="button" name="two" value="2" onclick="appendToDisplay(this)"/>
-            <input type="button" name="three" value="3" onclick="appendToDisplay(this)"/>
-            <input type="button" name="plus" value="+" onclick="appendToDisplay(this)"/>
-        </div>
-        <div class="row">
-            <input type="button" name="four" value="4" onclick="appendToDisplay(this)"/>
-            <input type="button" name="five" value="5" onclick="appendToDisplay(this)"/>
-            <input type="button" name="six" value="6" onclick="appendToDisplay(this)"/>
-            <input type="button" name="minus" value="-" onclick="appendToDisplay(this)"/>
-        </div>
-        <div class="row">
-            <input type="button" name="seven" value="7" onclick="appendToDisplay(this)"/>
-            <input type="button" name="eight" value="8" onclick="appendToDisplay(this)"/>
-            <input type="button" name="nine" value="9" onclick="appendToDisplay(this)"/>
-            <input type="button" name="times" value="*" onclick="appendToDisplay(this)"/>
-        </div>
-        <div class="row">
-            <input type="button" name="dot" value="." onclick="appendToDisplay(this)"/>
-            <input type="button" name="zero" value="0" onclick="appendToDisplay(this)"/>
-            <input type="submit" name="equals" value="=" onclick="calculate()"/>
-            <input type="button" name="divide" value="/" onclick="appendToDisplay(this)"/>
+    <form>
+        <div id="calculator">
+            <input type="text" id="display">
+            <br>
+            <button onclick="performOperation('7')">7</button>
+            <button onclick="performOperation('8')">8</button>
+            <button onclick="performOperation('9')">9</button>
+            <button onclick="performOperation('/')">/</button>
+            <br>
+            <button onclick="performOperation('4')">4</button>
+            <button onclick="performOperation('5')">5</button>
+            <button onclick="performOperation('6')">6</button>
+            <button onclick="performOperation('*')">*</button>
+            <br>
+            <button onclick="performOperation('1')">1</button>
+            <button onclick="performOperation('2')">2</button>
+            <button onclick="performOperation('3')">3</button>
+            <button onclick="performOperation('-')">-</button>
+            <br>
+            <button onclick="performOperation('0')">0</button>
+            <button onclick="performOperation('.')">.</button>
+            <button id="equals" onclick="calculate()">=</button>
+            <button onclick="performOperation('+')">+</button>
+            <br>
+            <button type="button" id="clear" onclick="clearDisplay()">clear</button>
         </div>
     </form>
-</div>
+
 
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 
@@ -232,19 +228,17 @@ if (isset($_POST['equals'])) {
     }
 
     function calculate() {
-
         let display = document.getElementById("display").value;
-    if (display === "") {
-        Swal.fire({
-            icon: 'error',
-            title: 'Jebe ti?',
-            text: 'Chceš to dojebat?',
-            showConfirmButton: true,
-            confirmButtonText: "Ok",
-        })
-        return;
-    }
-
+        if (display === "") {
+            swal.fire({
+                title: "Invalid Input!",
+                text: "Please enter a valid input before pressing equals.",
+                icon: "error",
+                showConfirmButton: true,
+                confirmButtonText: "Ok",
+            });
+            return;
+        }
         var expr = document.getElementById("display").value;
         var result = eval(expr);
         document.getElementById("display").value = result;
