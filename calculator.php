@@ -162,13 +162,13 @@ if (isset($_POST['equals'])) {
     <body>
 
     <div class="menu-container">
-        <button class="menu-button">Menu</button>
-        <div class="menu">
-            <a href="https://ipaiotmh.azurewebsites.net" class="menu-item">Form</a>
-            <a href="https://ipaiotmh.azurewebsites.net/data.txt" class="menu-item">Data</a>
-            <a href="https://ipaiotmh.azurewebsites.net/calculator.php" class="menu-item">Calc</a>
-        </div>
+    <button class="menu-button" onclick="toggleMenu()">Menu</button>
+    <div class="menu" id="menu">
+        <a href="https://ipaiotmh.azurewebsites.net" class="menu-item">Form</a>
+        <a href="https://ipaiotmh.azurewebsites.net/data.txt" class="menu-item">Data</a>
+        <a href="https://ipaiotmh.azurewebsites.net/calculator.php" class="menu-item">Calc</a>
     </div>
+</div>
 
 
     <div class="calculator">
@@ -223,5 +223,10 @@ if (isset($_POST['equals'])) {
 
     function clearDisplay() {
         document.getElementById("display").value = "";
+    }
+
+    function toggleMenu() {
+        let menu = document.getElementById("menu");
+        menu.style.display = (menu.style.display === "block") ? "none" : "block";
     }
 </script>
