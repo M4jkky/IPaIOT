@@ -99,12 +99,17 @@ if (isset($_POST['equals'])) {
             border-radius: 5px;
             font-size: 1.2rem;
             cursor: pointer;
-            margin-left: 10px;
+            display: inline-block;
+            align-self: center;
         }   
 
-#clear:hover {
-    background-color: #e53935; /* or any color you like */
-}
+        #clear:hover {
+            background-color: #e53935;
+        }
+        
+        .display-wrapper {
+            display: flex;
+        }
     </style>
 </head>
     <body>
