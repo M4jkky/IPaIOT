@@ -233,16 +233,19 @@ if (isset($_POST['equals'])) {
     }
 
     function calculate() {
-        let display = document.getElementById("display").value;
-        if (display === "") {
-            Swal.fire({
-                icon: 'error',
-                title: 'Boha, si prijebaný?',
-                text: 'Chceš to dojebať?',
-                showConfirmButton: true
-            })
-        return;
 
+        let display = document.getElementById("display").value;
+    if (display === "") {
+        Swal.fire({
+            icon: 'error',
+            title: 'Jebe ti?',
+            text: 'Chceš to dojebat?',
+            showConfirmButton: true
+        })
+        return;
+    }
+
+        
         var expr = document.getElementById("display").value;
         var result = eval(expr);
         document.getElementById("display").value = result;
@@ -257,59 +260,4 @@ if (isset($_POST['equals'])) {
         menu.style.display = (menu.style.display === "block") ? "none" : "block";
     }
 
-    function plus() {
-        let display = document.getElementById("display").value;
-        if (display === "") {
-            Swal.fire({
-                icon: 'error',
-                title: 'Boha, si prijebaný?',
-                text: 'Pluská ideš dávať, hej?',
-                showConfirmButton: true
-            })
-            return;
-        }
-        calculate()
-    }
-
-    function minus() {
-        let display = document.getElementById("display").value;
-        if (display === "") {
-            Swal.fire({
-                icon: 'error',
-                title: 'Boha, si prijebaný?',
-                text: 'Mínuská ideš dávať, hej?',
-                showConfirmButton: true
-            })
-            return;
-        }
-        calculate()
-    }
-
-    function times() {
-        let display = document.getElementById("display").value;
-        if (display === "") {
-            Swal.fire({
-                icon: 'error',
-                title: 'Boha, si prijebaný?',
-                text: 'Hviezdičky ideš dávať, hej?',
-                showConfirmButton: true
-            })
-            return;
-        }
-        calculate()
-    }
-
-    function divide() {
-        let display = document.getElementById("display").value;
-        if (display === "") {
-            Swal.fire({
-                icon: 'error',
-                title: 'Boha, si prijebaný?',
-                text: 'Lomítka ideš dávať, hej?',
-                showConfirmButton: true
-            })
-            return;
-        }
-        calculate()
-    }
 </script>
