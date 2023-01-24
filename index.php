@@ -244,6 +244,17 @@
                                 Data File
                             </button>
                         </a>
+
+                        <a href="https://ipaiotmh.azurewebsites.net/calculator.php">
+                            <button type="button" id="file">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                Calc
+                            </button>
+                        </a>
+
                     </div>
 
                 </form>

@@ -11,6 +11,49 @@ if (isset($_POST['equals'])) {
 <head>
     <title>Calculator</title>
     <style>
+
+        .menu-container {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+
+        .menu-button {
+            background-color: #00bfff; /* or any color you like */
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.2rem;
+        }
+
+        .menu-button:hover {
+            background-color: #0095d9; /* or any color you like */
+        }
+
+        .menu {
+            display: none;
+            position: absolute;
+            top: 50px;
+            right: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            padding: 10px;
+        }
+
+        .menu-item {
+            color: #000;
+            display: block;
+            text-decoration: none;
+            margin-bottom: 10px;
+        }
+
+        .menu-item:hover {
+            color: #00bfff;
+        }
+
+
     /* Calculator Container */
         .calculator {
             text-align:center;
@@ -117,6 +160,17 @@ if (isset($_POST['equals'])) {
     </style>
 </head>
     <body>
+
+    <div class="menu-container">
+        <button class="menu-button">Menu</button>
+        <div class="menu">
+            <a href="https://ipaiotmh.azurewebsites.net" class="menu-item">Form</a>
+            <a href="https://ipaiotmh.azurewebsites.net/data.txt" class="menu-item">Data</a>
+            <a href="https://ipaiotmh.azurewebsites.net/calculator.php" class="menu-item">Calc</a>
+        </div>
+    </div>
+
+
     <div class="calculator">
     <form method="post" action="">
         <div class="display-wrapper">
