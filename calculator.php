@@ -73,50 +73,108 @@ if (isset($_POST['equals'])) {
 
 
     /* Calculator Container */
-    #calculator {
-    width: 250px;
-    height: 350px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #f3f3f3;
-    border-radius: 10px;
-}
+        .calculator {
+            text-align:center;
+            width: 300px;
+            margin: 50px auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px #ccc;
+            display: flex;
+            flex-wrap: wrap;
+        }
 
-    #display {
-        width: 100%;
-        height: 50px;
-        margin-bottom: 20px;
-        padding: 10px;
-        font-size: 1.5em;
-        text-align: right;
-        background-color: #ffffff;
-        border: none;
-        border-radius: 5px;
-    }
+        #display {
+            width: 100%;
+            height: 50px;
+            font-size: 1.5rem;
+            padding: 10px -50px;
+            border-radius: 5px;
+            border: none;
+            box-shadow: 0px 0px 5px #ccc;
+            text-align: center;
+            margin: 20px auto;
+            background-color: #fff;
+            color: #333;
+        }
 
-    button {
-        width: 60px;
-        height: 60px;
-        margin: 0;
-        padding: 0;
-        font-size: 1.5em;
-        background-color: #ffffff;
-        border: 1px solid #cccccc;
-        border-radius: 5px;
-        color: #333333;
-        transition: all 0.2s;
-    }
+        .row {
+            width: 100%;
+            display: flex;
+        }
 
-    button:hover {
-        background-color: #cccccc;
-    }
+        input[type="submit"] {
+            background-color : #32a869;
+            width: 25%;
+            height: 40px;
+            font-size: 1.2rem;
+            margin: 5px;
+            border-radius: 5px;
+            border: none;
+            color: #333;
+            transition: all 0.2s ease-in-out;
+        }
 
-    #clear {
-        width: 100%;
-        margin-top: 20px;
-        background-color: #ff0000;
-        color: #ffffff;
-    }
+        input[type="submit"]:hover {
+            background-color: #c8cf48;
+            cursor: pointer;
+        }
+
+        input[type="button"] {
+            width: 25%;
+            height: 40px;
+            font-size: 1.2rem;
+            margin: 5px;
+            border-radius: 5px;
+            border: none;
+            background-color: #ddd;
+            color: #333;
+            transition: all 0.2s ease-in-out;
+        }
+
+        input[type="button"]:hover {
+            background-color: #ccc;
+            cursor: pointer;
+        }
+
+        input[name="plus"],
+        input[name="minus"],
+        input[name="times"],
+        input[name="divide"] {
+            background-color: #f44336;
+            color: #fff;
+        }
+
+        input[name="plus"]:hover,
+        input[name="minus"]:hover,
+        input[name="times"]:hover,
+        input[name="divide"]:hover {
+            background-color: #e53935;
+        }
+
+        #clear {
+            width: 29%;
+            height: 50px;
+            font-size: 1.2rem;
+            margin: 5px;
+            border-radius: 5px;
+            border: none;
+            background-color: #38c2c2;
+            color: #fff;
+            transition: all 0.2s ease-in-out;
+            display: inline-block;
+            align-self: center;
+            text-align: center;
+            margin-left: 10px;
+        }   
+
+        #clear:hover {
+            background-color: #156b6b;
+        }
+        
+        .display-wrapper {
+            display: flex;
+        }
     </style>
 </head>
     <body>
@@ -131,34 +189,38 @@ if (isset($_POST['equals'])) {
 </div>
 
 
-    <form>
-        <div id="calculator">
-            <input type="text" id="display">
-            <br>
-            <button onclick="performOperation('7')">7</button>
-            <button onclick="performOperation('8')">8</button>
-            <button onclick="performOperation('9')">9</button>
-            <button onclick="performOperation('/')">/</button>
-            <br>
-            <button onclick="performOperation('4')">4</button>
-            <button onclick="performOperation('5')">5</button>
-            <button onclick="performOperation('6')">6</button>
-            <button onclick="performOperation('*')">*</button>
-            <br>
-            <button onclick="performOperation('1')">1</button>
-            <button onclick="performOperation('2')">2</button>
-            <button onclick="performOperation('3')">3</button>
-            <button onclick="performOperation('-')">-</button>
-            <br>
-            <button onclick="performOperation('0')">0</button>
-            <button onclick="performOperation('.')">.</button>
-            <button id="equals" onclick="calculate()">=</button>
-            <button onclick="performOperation('+')">+</button>
-            <br>
-            <button type="button" id="clear" onclick="clearDisplay()">clear</button>
+    <div class="calculator">
+    <form method="post" action="">
+        <div class="display-wrapper">
+            <input type="text" id="display" name="display" value="<?php echo $display; ?>" readonly/>
+            <button id="clear" onclick="clearDisplay()">C</button>
+        </div>
+        <div class="row">
+            <input type="button" name="one" value="1" onclick="appendToDisplay(this)"/>
+            <input type="button" name="two" value="2" onclick="appendToDisplay(this)"/>
+            <input type="button" name="three" value="3" onclick="appendToDisplay(this)"/>
+            <input type="button" name="plus" value="+" onclick="appendToDisplay(this)"/>
+        </div>
+        <div class="row">
+            <input type="button" name="four" value="4" onclick="appendToDisplay(this)"/>
+            <input type="button" name="five" value="5" onclick="appendToDisplay(this)"/>
+            <input type="button" name="six" value="6" onclick="appendToDisplay(this)"/>
+            <input type="button" name="minus" value="-" onclick="appendToDisplay(this)"/>
+        </div>
+        <div class="row">
+            <input type="button" name="seven" value="7" onclick="appendToDisplay(this)"/>
+            <input type="button" name="eight" value="8" onclick="appendToDisplay(this)"/>
+            <input type="button" name="nine" value="9" onclick="appendToDisplay(this)"/>
+            <input type="button" name="times" value="*" onclick="appendToDisplay(this)"/>
+        </div>
+        <div class="row">
+            <input type="button" name="dot" value="." onclick="appendToDisplay(this)"/>
+            <input type="button" name="zero" value="0" onclick="appendToDisplay(this)"/>
+            <input type="submit" name="equals" value="=" onclick="calculate()"/>
+            <input type="button" name="divide" value="/" onclick="appendToDisplay(this)"/>
         </div>
     </form>
-
+</div>
 
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 
@@ -170,17 +232,19 @@ if (isset($_POST['equals'])) {
     }
 
     function calculate() {
+
         let display = document.getElementById("display").value;
-        if (display === "") {
-            swal.fire({
-                title: "Invalid Input!",
-                text: "Please enter a valid input before pressing equals.",
-                icon: "error",
-                showConfirmButton: true,
-                confirmButtonText: "Ok",
-            });
-            return;
-        }
+    if (display === "") {
+        Swal.fire({
+            icon: 'error',
+            title: 'Jebe ti?',
+            text: 'Chceš to dojebat?',
+            showConfirmButton: true,
+            confirmButtonText: "Ok",
+        })
+        return;
+    }
+
         var expr = document.getElementById("display").value;
         var result = eval(expr);
         document.getElementById("display").value = result;
