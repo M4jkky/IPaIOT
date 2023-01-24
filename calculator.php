@@ -12,66 +12,70 @@ if (isset($_POST['equals'])) {
     <title>Calculator</title>
     <style>
     /* Calculator Container */
-    .calculator {
+        .calculator {
         width: 300px;
         margin: 50px auto;
-        background-color: #f5f5f5;
         padding: 20px;
         border-radius: 10px;
         box-shadow: 0px 0px 10px #ccc;
         display: flex;
         flex-wrap: wrap;
-        
-    }
+        }
 
-    /* Calculator Display */
-    .calculator #display {
-        width: 100%;
-        height: 50px;
-        font-size: 1.5rem;
-        padding: 10px;
-        border-radius: 5px;
-        border: none;
-        box-shadow: 0px 0px 5px #ccc;
-        text-align: right;
-        margin-bottom: 20px;
-        justify-content: center;
-    }
+        #display {
+            width: 100%;
+            height: 50px;
+            font-size: 1.5rem;
+            padding: 10px;
+            border-radius: 5px;
+            border: none;
+            box-shadow: 0px 0px 5px #ccc;
+            text-align: right;
+            margin-bottom: 20px;
+            background-color: #fff;
+            color: #333;
+        }
 
-    /* Calculator Buttons */
-    .calculator input[type="button"] {
-        width: 25%;
-        height: 40px;
-        font-size: 1.2rem;
-        margin: 5px;
-        border-radius: 5px;
-        border: none;
-        background-color: #ddd;
-        color: #333;
-        transition: all 0.2s ease-in-out;
-    }
+        .row {
+            width: 100%;
+            display: flex;
+        }
 
-    .calculator input[type="button"]:hover {
-        background-color: #ccc;
-        cursor: pointer;
-    }
+        input[type="button"],
+        input[type="submit"] {
+            width: 25%;
+            height: 40px;
+            font-size: 1.2rem;
+            margin: 5px;
+            border-radius: 5px;
+            border: none;
+            background-color: #ddd;
+            color: #333;
+            transition: all 0.2s ease-in-out;
+        }
 
-    /* Calculator Operators */
-    .calculator input[name="plus"],
-    .calculator input[name="minus"],
-    .calculator input[name="times"],
-    .calculator input[name="divide"] {
-        width: 25%;
-        background-color: #f44336;
-        color: #fff;
-    }
+        input[type="button"]:hover,
+        input[type="submit"]:hover {
+            background-color: #ccc;
+            cursor: pointer;
+        }
 
-    .calculator input[name="plus"]:hover,
-    .calculator input[name="minus"]:hover,
-    .calculator input[name="times"]:hover,
-    .calculator input[name="divide"]:hover {
-        background-color: #e53935;
-    }
+        input[name="plus"],
+        input[name="minus"],
+        input[name="times"],
+        input[name="divide"],
+        input[name="equals"]:hover {
+            background-color: #f44336;
+            color: #fff;
+        }
+
+        input[name="plus"]:hover,
+        input[name="minus"]:hover,
+        input[name="times"]:hover,
+        input[name="divide"]:hover,
+        input[name="equals"]:hover {
+            background-color: #e53935;
+        }
     </style>
 </head>
     <body>
