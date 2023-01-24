@@ -240,12 +240,12 @@ if (isset($_POST['equals'])) {
             icon: 'error',
             title: 'Jebe ti?',
             text: 'Chceš to dojebat?',
-            showConfirmButton: true
+            showConfirmButton: true,
+            confirmButtonText: "Ok",
         })
         return;
     }
 
-        
         var expr = document.getElementById("display").value;
         var result = eval(expr);
         document.getElementById("display").value = result;
