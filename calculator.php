@@ -222,7 +222,11 @@ if (isset($_POST['equals'])) {
     </form>
 </div>
 
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+
 <script>
+    
+
     function appendToDisplay(btn) {
         var btnValue = btn.value;
         document.getElementById("display").value += btnValue;
@@ -231,9 +235,13 @@ if (isset($_POST['equals'])) {
     function calculate() {
         let display = document.getElementById("display").value;
         if (display === "") {
-            alert("Tak si prijebaný?");
-            return;
-        }
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Tak si prijebaný?',
+            })
+        return;
+    }
         var expr = document.getElementById("display").value;
         var result = eval(expr);
         document.getElementById("display").value = result;
