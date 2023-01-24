@@ -13,25 +13,26 @@ if (isset($_POST['equals'])) {
     <style>
     /* Calculator Container */
         .calculator {
-        width: 300px;
-        margin: 50px auto;
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0px 0px 10px #ccc;
-        display: flex;
-        flex-wrap: wrap;
+            text-align:center;
+            width: 300px;
+            margin: 50px auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px #ccc;
+            display: flex;
+            flex-wrap: wrap;
         }
 
         #display {
             width: 100%;
             height: 50px;
             font-size: 1.5rem;
-            padding: 10px 50px;
+            padding: 10px;
             border-radius: 5px;
             border: none;
             box-shadow: 0px 0px 5px #ccc;
             text-align: right;
-            margin-bottom: 20px;
+            margin: 20px auto;
             background-color: #fff;
             color: #333;
         }
