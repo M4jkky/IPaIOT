@@ -92,7 +92,7 @@ if (isset($_POST['equals'])) {
         }
 
         #clear {
-            width: 25%;
+            width: 27%;
             height: 50px;
             font-size: 1.2rem;
             margin: 5px;
@@ -104,7 +104,7 @@ if (isset($_POST['equals'])) {
             display: inline-block;
             align-self: center;
             text-align: center;
-            margin-left: 20px;
+            margin-left: 18px;
         }   
 
         #clear:hover {
