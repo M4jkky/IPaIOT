@@ -234,7 +234,7 @@ if (isset($_POST['equals'])) {
     function calculate() {
 
         let display = document.getElementById("display").value;
-    if (display === "") {
+    if (display === "" || display === "+" || display === "-" || display === "/" || display === "*") {
         Swal.fire({
             icon: 'error',
             title: 'Jebe ti?',
@@ -242,6 +242,7 @@ if (isset($_POST['equals'])) {
             showConfirmButton: true,
             confirmButtonText: "Ok",
         })
+        
         return;
     }
 
